@@ -22,7 +22,7 @@ while True:
     else:
         break
 while True:
-    curexp = colint('How much XP do you have toward the next level? (in rank card)\n(Please type full number. e.g. 33.6k > 33600) >> ')
+    curexp = colint('How much XP do you have toward the next level? (in rank card)\n(Please type full number. e.g. 33.6k > 33600) >> ', 1, 1000000000)
     if curexp > (5 * (curlvl ** 2) + (50 * curlvl) + 100 - 0):
         print('Please check your input and try again.')
         continue
