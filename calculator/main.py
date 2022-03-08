@@ -14,15 +14,15 @@ def colint(qst, min, max):
 
 acthrs = colint('About how many hours are you active per day? Set to any number if you don\'t have or need this information. >> ', 1, 24)
 while True:
-    curlvl = colint('What is your current level? >> ', 0, 100000)
-    deslvl = colint('What is your desired level? >> ', 0, 100000)
+    curlvl = colint('What is your current level? >> ', 1, 100000)
+    deslvl = colint('What is your desired level? >> ', 1, 100000)
     if curlvl >= deslvl:
         print('Please check your inputs for current/desired level and try again.')
         continue
     else:
         break
 while True:
-    curexp = colint('How much XP do you have toward the next level? (in rank card)\n(Please type full number. e.g. 33.6k > 33600) >> ', 1, 1000000000)
+    curexp = colint('How much XP do you have toward the next level? (in rank card)\n(Please type full number. e.g. 33.6k > 33600) >> ', 0, 1000000000)
     if curexp > (5 * (curlvl ** 2) + (50 * curlvl) + 100 - 0):
         print('Please check your input and try again.')
         continue
