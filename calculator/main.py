@@ -14,8 +14,8 @@ def colint(qst, min, max):
 
 acthrs = colint('About how many hours are you active per day? Set to any number if you don\'t have or need this information. >> ', 1, 24)
 while True:
-    curlvl = colint('What is your current level? >> ', 1, 100000)
-    deslvl = colint('What is your desired level? >> ', 1, 100000)
+    curlvl = colint('What is your current level? >> ', 0, 100000)
+    deslvl = colint('What is your desired level? >> ', 0, 100000)
     if curlvl >= deslvl:
         print('Please check your inputs for current/desired level and try again.')
         continue
